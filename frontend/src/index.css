@@ -1,0 +1,385 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 320px;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: #fff;
+}
+
+.brand-title {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.auth-menu {
+  position: relative;
+}
+
+.auth-toggle {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  min-width: 140px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.auth-dropdown a,
+.auth-dropdown button {
+  text-decoration: none;
+  color: #111827;
+  background: #fff;
+  border: 0;
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+}
+
+.auth-dropdown a:hover,
+.auth-dropdown button:hover {
+  background: #f1f5f9;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.page-header p {
+  margin: 0.4rem 0 1.4rem;
+  color: #4b5563;
+}
+
+.table-wrap {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+th {
+  background: #f8fafc;
+  color: #374151;
+}
+
+.link-btn {
+  text-decoration: none;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.reserve-link {
+  margin-left: 0.7rem;
+}
+
+.reserve-inline-btn {
+  margin-left: 0.7rem;
+}
+
+.detail-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.reservation-form {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.reservation-form h4 {
+  margin: 0 0 0.75rem;
+}
+
+.passenger-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.passenger-count {
+  margin: 0;
+}
+
+.passenger-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #f8fafc;
+}
+
+.passenger-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.passenger-card-header h5 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.reservation-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.reservation-form input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+}
+
+.reservation-form button {
+  margin-top: 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  background: #0f766e;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reservation-form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+}
+
+.danger-btn {
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.form-actions {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 1rem;
+  z-index: 25;
+}
+
+.modal-card {
+  width: min(960px, 100%);
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3);
+  padding: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.auth-page {
+  max-width: 520px;
+}
+
+.profile-page {
+  max-width: 900px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1rem;
+}
+
+.profile-grid p {
+  margin: 0;
+}
+
+.auth-form {
+  display: grid;
+  gap: 0.8rem;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.auth-form input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+}
+
+.auth-form button {
+  margin-top: 0.35rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  background: #1d4ed8;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+}
+
+.success {
+  color: #065f46;
+  background: #d1fae5;
+  border: 1px solid #a7f3d0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "logo . auth"
+      "title title title";
+  }
+
+  .brand {
+    grid-area: logo;
+  }
+
+  .brand-title {
+    grid-area: title;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .auth-menu {
+    grid-area: auth;
+    justify-self: end;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
