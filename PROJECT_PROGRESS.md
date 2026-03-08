@@ -358,3 +358,12 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
    - `flight/migrations/0004_alter_passenger_phone_number.py`
 3. Dogrulama:
    - `python manage.py check` basarili.
+
+## 2026-03-08 - Admin Static/CSS Fix (Render Prod)
+
+1. WhiteNoise middleware eklendi.
+2. Static ayarlari eklendi:
+   - `STATIC_ROOT`
+   - `STATICFILES_STORAGE=CompressedManifestStaticFilesStorage`
+3. Backend startup akisina `collectstatic --noinput` eklendi.
+4. Docker build icin `whitenoise` paketi eklendi.
