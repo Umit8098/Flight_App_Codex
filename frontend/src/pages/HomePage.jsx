@@ -82,7 +82,7 @@ function HomePage({ flights, loading, error, user }) {
         flight_id: Number(selectedFlight.id),
         passenger: passengersForm.map((passenger) => ({
           ...passenger,
-          phone_number: Number(passenger.phone_number),
+          phone_number: String(passenger.phone_number).trim(),
         })),
       });
       setSubmitSuccess("Reservation basariyla olusturuldu.");
@@ -232,7 +232,7 @@ function HomePage({ flights, loading, error, user }) {
                     <label>
                       Phone Number
                       <input
-                        type="number"
+                        type="tel"
                         name="phone_number"
                         value={passenger.phone_number}
                         onChange={(event) => onPassengerChange(index, event)}

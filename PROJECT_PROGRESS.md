@@ -367,3 +367,15 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
    - `STATICFILES_STORAGE=CompressedManifestStaticFilesStorage`
 3. Backend startup akisina `collectstatic --noinput` eklendi.
 4. Docker build icin `whitenoise` paketi eklendi.
+
+## 2026-03-08 - Frontend UI Polish
+
+1. Global tema yenilendi (`frontend/src/index.css`):
+   - Yeni renk paleti, tipografi, arka plan gradyanlari
+   - Navbar, tablo, kart, form ve modal stilleri modernlestirildi
+   - Mobil responsive düzen korundu ve iyilestirildi
+2. Reservation form telefon alani backend degisikligiyle uyumlu hale getirildi:
+   - `type=\"number\"` -> `type=\"tel\"`
+   - API payload telefon degeri `String` olarak gonderilecek sekilde guncellendi
+3. Dogrulama:
+   - `npm run build` basarili.

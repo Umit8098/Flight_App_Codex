@@ -77,7 +77,7 @@ function FlightDetailPage({ user }) {
         flight_id: Number(id),
         passenger: passengersForm.map((passenger) => ({
           ...passenger,
-          phone_number: Number(passenger.phone_number),
+          phone_number: String(passenger.phone_number).trim(),
         })),
       };
 
@@ -284,7 +284,7 @@ function FlightDetailPage({ user }) {
                   <label>
                     Phone Number
                     <input
-                      type="number"
+                      type="tel"
                       name="phone_number"
                       value={passenger.phone_number}
                       onChange={(event) => onPassengerChange(index, event)}
