@@ -17,7 +17,8 @@ class Passenger(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     email = models.EmailField()
-    phone_number = models.IntegerField()
+    # Phone values can start with 0 and may include country prefixes.
+    phone_number = models.CharField(max_length=20)
     create_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

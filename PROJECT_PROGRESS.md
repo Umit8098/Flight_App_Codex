@@ -350,3 +350,11 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
 3. Bu dosyada yeni teknoloji gecerse, kisa aciklamasi da ayni bolume eklenecek.
 4. Mevcut ana proje dizini artik:
    - `/Users/umit-user/Belgeler_Yerel/backend/project-django-cv/Flight_App_CH-12_Codex`
+
+## 2026-03-08 - Phone Number Field Fix
+
+1. `Passenger.phone_number` alani `IntegerField` -> `CharField(max_length=20)` olarak degistirildi.
+2. Yeni migration olusturuldu:
+   - `flight/migrations/0004_alter_passenger_phone_number.py`
+3. Dogrulama:
+   - `python manage.py check` basarili.
