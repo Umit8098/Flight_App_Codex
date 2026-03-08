@@ -37,7 +37,13 @@ function MyReservationsPage({ isStaffView = false }) {
         </p>
       </div>
 
-      {loading && <p>Yukleniyor...</p>}
+      {loading && (
+        <div className="table-wrap skeleton-wrap">
+          <div className="skeleton-line" />
+          <div className="skeleton-line" />
+          <div className="skeleton-line short" />
+        </div>
+      )}
       {error && <p className="error">{error}</p>}
 
       {!loading && !error && (
@@ -70,7 +76,7 @@ function MyReservationsPage({ isStaffView = false }) {
               ))}
             </tbody>
           </table>
-          {rows.length === 0 && <p>Reservation bulunamadi.</p>}
+          {rows.length === 0 && <p className="empty-state">Reservation bulunamadi.</p>}
         </div>
       )}
     </section>

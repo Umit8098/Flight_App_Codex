@@ -99,15 +99,22 @@ function HomePage({ flights, loading, error, user }) {
       <section className="page">
         <div className="page-header">
           <h2>Flights</h2>
-          <p>{roleText}</p>
+          <p className="muted">{roleText}</p>
           {user && (
-            <p>
+            <p className="muted">
               Reservation icin istedigin ucusta <strong>Reserve</strong> butonunu kullan.
             </p>
           )}
         </div>
 
-        {loading && <p>Yukleniyor...</p>}
+        {loading && (
+          <div className="table-wrap skeleton-wrap">
+            <div className="skeleton-line" />
+            <div className="skeleton-line" />
+            <div className="skeleton-line" />
+            <div className="skeleton-line short" />
+          </div>
+        )}
         {error && <p className="error">{error}</p>}
 
         {!loading && !error && (
@@ -151,7 +158,7 @@ function HomePage({ flights, loading, error, user }) {
                 ))}
               </tbody>
             </table>
-            {flights.length === 0 && <p>Kayit bulunamadi.</p>}
+            {flights.length === 0 && <p className="empty-state">Kayit bulunamadi.</p>}
           </div>
         )}
       </section>

@@ -207,7 +207,14 @@ function StaffFlightsPage({ onFlightsChanged }) {
 
       <div className="detail-card staff-table-card">
         <h3>Flights</h3>
-        {loading && <p>Yukleniyor...</p>}
+        {loading && (
+          <div className="table-wrap skeleton-wrap">
+            <div className="skeleton-line" />
+            <div className="skeleton-line" />
+            <div className="skeleton-line" />
+            <div className="skeleton-line short" />
+          </div>
+        )}
         {error && <p className="error">{error}</p>}
         {!loading && !error && (
           <div className="table-wrap">
@@ -248,6 +255,7 @@ function StaffFlightsPage({ onFlightsChanged }) {
                 ))}
               </tbody>
             </table>
+            {flights.length === 0 && <p className="empty-state">Flight bulunamadi.</p>}
           </div>
         )}
       </div>

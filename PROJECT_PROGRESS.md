@@ -383,3 +383,7 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
    - API payload telefon degeri `String` olarak gonderilecek sekilde guncellendi
 3. Dogrulama:
    - `npm run build` basarili.
+4. Ek polish:
+   - Home/My Reservations/Staff Flights icin loading skeleton gorunumu eklendi.
+   - Bos liste durumlari icin `empty-state` gorunumu eklendi.
+   - Header alt metinleri icin `muted` sinifi eklendi.
