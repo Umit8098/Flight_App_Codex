@@ -18,7 +18,7 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
 ## 2026-03-04 - Docker Yapilandirma Asamasi
 
 1. Aktif proje klasoru netlestirildi:
-   - `/Users/umit-user/Belgeler_Yerel/backend/project-django-cv/Flight_App_CH-12_Codex`
+   - Proje koku: `Flight_App_CH-12_Codex/`
 2. `frontend/` klasoru Vite React ile olusturuldu.
 3. Frontend bagimliliklari yuklendi (`npm install`).
 4. Backend container dosyalari eklendi:
@@ -223,10 +223,10 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
 
 ## 2026-03-06 - Delivery Docs Update
 
-1. `backend/Readme.md` guncellendi:
-   - Monorepo calistirma adimlari
-   - Guncel frontend route ozetleri
-   - Smoke test checklist linki
+1. Proje dokumantasyonlari guncellendi:
+   - `PROJECT_PROGRESS.md`
+   - `DEPLOY_CHECKLIST.md`
+   - `SMOKE_TEST_CHECKLIST.md`
 2. Proje kokune `SMOKE_TEST_CHECKLIST.md` eklendi:
    - Baslatma
    - Auth akislar
@@ -294,17 +294,21 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
 5. Backend ic saglik kontrolu:
    - `docker compose exec -T backend python manage.py check` -> basarili.
 
-## Sonraki Hedef (Plan)
+## 2026-03-08 - Guncel Durum
 
-1. Monorepo yapisini kur:
-   - `flight-app/backend`
-   - `flight-app/frontend`
-2. Backend ve frontend icin Dockerfile yaz.
-3. Koke `docker-compose.yml` ekle (`backend + frontend + postgres + redis`).
-4. Local ortamda `docker compose up --build` ile tum sistemi calistir.
-5. Deploy stratejisi sec:
-   - Backend + DB: Render veya Railway
-   - Frontend: Vercel veya Netlify
+1. Monorepo yapi tamam:
+   - `backend/`
+   - `frontend/`
+2. Docker yapisi tamam:
+   - Backend + frontend Dockerfile
+   - `docker-compose.yml` (`backend + frontend + db + redis`)
+3. Deploy hedefi tamam:
+   - Backend: Render
+   - Frontend: Render
+   - Database: Neon PostgreSQL (`flight_app`)
+4. Local + cloud calisma dogrulandi:
+   - Local fullstack calisiyor
+   - Render/Neon fullstack calisiyor
 
 ## Teknoloji Kisa Notlari
 
@@ -349,7 +353,7 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
 2. Bundan sonra her adim tamamlandiginda bu log guncellenecek.
 3. Bu dosyada yeni teknoloji gecerse, kisa aciklamasi da ayni bolume eklenecek.
 4. Mevcut ana proje dizini artik:
-   - `/Users/umit-user/Belgeler_Yerel/backend/project-django-cv/Flight_App_CH-12_Codex`
+   - `Flight_App_CH-12_Codex/`
 
 ## 2026-03-08 - Phone Number Field Fix
 
