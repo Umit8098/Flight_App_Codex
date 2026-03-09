@@ -2,14 +2,14 @@
 
 Production-ready flight reservation backend with token authentication, role-based permissions, and full reservation management.
 
-## Live
+## 🌐 Live
 
 - Backend: `https://umitdev-flight-backend.onrender.com`
 - Swagger: `https://umitdev-flight-backend.onrender.com/swagger/`
 - Redoc: `https://umitdev-flight-backend.onrender.com/redoc/`
 - Frontend (paired UI): `https://umitdev-flight-frontend.onrender.com`
 
-## Why This Project
+## 🎯 Why This Project
 
 This project demonstrates an end-to-end backend workflow that recruiters usually care about:
 
@@ -19,7 +19,7 @@ This project demonstrates an end-to-end backend workflow that recruiters usually
 - API documentation (Swagger/Redoc)
 - Containerized local/prod parity (Docker)
 
-## Core Features
+## 🚀 Core Features
 
 - User registration/login/logout (`dj-rest-auth` + token auth)
 - Profile details and password change
@@ -30,7 +30,7 @@ This project demonstrates an end-to-end backend workflow that recruiters usually
 - Staff-only management screens supported by API permissions
 - Swagger and Redoc API docs
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - Python 3.11
 - Django 4.1.7
@@ -41,13 +41,13 @@ This project demonstrates an end-to-end backend workflow that recruiters usually
 - Docker + Gunicorn + WhiteNoise
 - Render (app hosting) + Neon (managed PostgreSQL)
 
-## Architecture
+## 🏗️ Architecture
 
 - `backend/` -> Django API service
 - `frontend/` -> React client (separate service)
 - DB -> Neon PostgreSQL (`flight_app`)
 
-## Main API Endpoints
+## 📡 Main API Endpoints
 
 ### Auth
 
@@ -71,7 +71,7 @@ This project demonstrates an end-to-end backend workflow that recruiters usually
 - `GET /flight/reservations/{id}/` (auth + permission)
 - `PUT/PATCH/DELETE /flight/reservations/{id}/` (auth + permission)
 
-## Local Setup (Backend Only)
+## ⚡ Local Setup (Backend Only)
 
 ```bash
 cd backend
@@ -84,7 +84,7 @@ python manage.py runserver
 
 Backend runs at: `http://127.0.0.1:8000`
 
-## Local Fullstack (Docker)
+## 🐳 Local Fullstack (Docker)
 
 From project root:
 
@@ -99,7 +99,7 @@ Services:
 - Frontend: `http://localhost:5173`
 - PostgreSQL: host `5433` -> container `5432`
 
-## Environment Variables
+## 🔐 Environment Variables
 
 Use templates only:
 
@@ -108,7 +108,7 @@ Use templates only:
 
 Do not commit real `.env` values.
 
-## Deploy Notes
+## 🌍 Deploy Notes
 
 Current production path:
 
@@ -122,7 +122,7 @@ Detailed deployment/runbook:
 - `../SMOKE_TEST_CHECKLIST.md`
 - `../PROJECT_PROGRESS.md`
 
-## Contact
+## 📬 Contact
 
 - GitHub: [@Umit8098](https://github.com/Umit8098)
 - LinkedIn: [@umit-arat](https://linkedin.com/in/umit-arat/)

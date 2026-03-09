@@ -37,6 +37,7 @@ Responsive React frontend for flight listing, reservation management, staff flig
 - [🔐 Environment Variables](#-environment-variables)
 - [🌍 Environment Mapping](#-environment-mapping)
 - [📌 Key Pages](#-key-pages)
+- [📬 Contact](#-contact)
 
 ## ✨ Overview
 
@@ -125,3 +126,8 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 - `/staff/flights` -> Staff flight CRUD
 - `/staff/reservations` -> Staff reservation list
 - `/login`, `/register`
+
+## 📬 Contact
+
+- GitHub: [@Umit8098](https://github.com/Umit8098)
+- LinkedIn: [@umit-arat](https://linkedin.com/in/umit-arat/)
