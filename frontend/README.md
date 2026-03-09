@@ -1,16 +1,127 @@
-# React + Vite
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React%20(Vite)-61DAFB?style=flat&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Routing-React%20Router-CA4245?style=flat&logo=reactrouter&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTTP-Axios-5A29E4?style=flat" />
+  <img src="https://img.shields.io/badge/Auth-Token%20Storage-0EA5E9?style=flat" />
+  <img src="https://img.shields.io/badge/Deployment-Render-46E3B7?style=flat&logo=render&logoColor=black" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center">Flight App Frontend ✈️</h1>
 
-Currently, two official plugins are available:
+<p align="center">
+Responsive React frontend for flight listing, reservation management, staff flight CRUD, and auth flows integrated with Django REST backend.
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
+  <h3>
+    <a href="https://umitdev-flight-frontend.onrender.com">🖥️ Live (Prod)</a>
+    |
+    <a href="https://umitdev-flight-frontend-staging.onrender.com">🧪 Live (Staging)</a>
+    |
+    <a href="https://umitdev-flight-backend.onrender.com/swagger/">📘 Backend Swagger</a>
+  </h3>
+</div>
 
-## React Compiler
+<!-- GIF PLACEHOLDER: put your gif inside frontend/ and update file name if needed -->
+<div align="center">
+  <img src="./frontend-demo.gif" alt="flight-frontend-demo" width="900"/>
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📚 Navigation
 
-## Expanding the ESLint configuration
+- [✨ Overview](#-overview)
+- [🚀 Features](#-features)
+- [🗂️ Project Structure](#️-project-structure)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [⚡ Local Setup](#-local-setup)
+- [🔐 Environment Variables](#-environment-variables)
+- [🌍 Environment Mapping](#-environment-mapping)
+- [📌 Key Pages](#-key-pages)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Overview
+
+This frontend provides:
+
+- Public flight discovery (anonymous)
+- Auth flows (register/login/logout)
+- Reservation create/update/delete (multi-passenger)
+- Profile page (password change)
+- Staff panels for flight CRUD and reservation visibility
+
+## 🚀 Features
+
+- React Router based page navigation
+- Axios API client with token interceptor
+- LocalStorage token persistence (`flight_app_token`)
+- Role-based UI guards (`user` vs `staff`)
+- Home reservation modal (without leaving list page)
+- Responsive navigation with auth dropdown
+- Staging/prod backend routing support
+
+## 🗂️ Project Structure
+
+```text
+src/
+├─ api/
+│  └─ client.js
+├─ components/
+│  └─ Navbar.jsx
+├─ pages/
+│  ├─ HomePage.jsx
+│  ├─ FlightDetailPage.jsx
+│  ├─ MyReservationsPage.jsx
+│  ├─ StaffFlightsPage.jsx
+│  ├─ ProfilePage.jsx
+│  ├─ LoginPage.jsx
+│  └─ RegisterPage.jsx
+├─ App.jsx
+├─ index.css
+└─ main.jsx
+```
+
+## 🛠️ Tech Stack
+
+- React + Vite
+- React Router
+- Axios
+- Plain CSS (custom design system)
+- Render (deployment)
+
+## ⚡ Local Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+App runs at `http://localhost:5173`.
+
+## 🔐 Environment Variables
+
+Use templates:
+
+- `.env.example` (local)
+- `.env.production.example` (production)
+
+Main variable:
+
+```env
+VITE_API_BASE_URL=http://127.0.0.1:8000
+```
+
+## 🌍 Environment Mapping
+
+- **Prod frontend** -> `https://umitdev-flight-backend.onrender.com`
+- **Staging frontend** -> `https://umitdev-flight-backend-staging.onrender.com`
+- **Local frontend** -> `http://127.0.0.1:8000`
+
+## 📌 Key Pages
+
+- `/` -> Flights home + reserve modal
+- `/flights/:id` -> Flight details + reservation management
+- `/my-reservations` -> User reservation list
+- `/profile` -> User info + password change
+- `/staff/flights` -> Staff flight CRUD
+- `/staff/reservations` -> Staff reservation list
+- `/login`, `/register`
