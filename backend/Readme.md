@@ -124,5 +124,5 @@ Detailed deployment/runbook:
 
 ## Contact
 
-- GitHub: `https://github.com/Umit8098`
-- LinkedIn: `https://linkedin.com/in/umit-arat/`
+- GitHub: [@Umit8098](https://github.com/Umit8098)
+- LinkedIn: [@umit-arat](https://linkedin.com/in/umit-arat/)
