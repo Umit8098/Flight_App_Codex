@@ -188,3 +188,9 @@ backend/staticfiles/
 frontend/node_modules/
 frontend/dist/
 .DS_Store
+
+# Env safety
+.env.*
+!.env.example
+!frontend/.env.example
+!frontend/.env.production.example

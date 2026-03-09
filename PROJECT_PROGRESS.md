@@ -387,3 +387,9 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
    - Home/My Reservations/Staff Flights icin loading skeleton gorunumu eklendi.
    - Bos liste durumlari icin `empty-state` gorunumu eklendi.
    - Header alt metinleri icin `muted` sinifi eklendi.
+
+## 2026-03-09 - README + Env Template Standardization
+
+1. Proje kokune yeni `README.md` eklendi (monorepo, local run, docker run, deploy ozet).
+2. `.env.example` gercek secret icermeyecek sekilde production template formatinda guncellendi.
+3. `frontend/.env.example` ve `frontend/.env.production.example` dosyalari acik ve tutarli aciklamalarla guncellendi.
