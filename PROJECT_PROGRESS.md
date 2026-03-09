@@ -398,3 +398,16 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
    - teknoloji ve mimari ozeti
    - endpoint ozetleri
    - local/docker run adimlari
+
+## 2026-03-09 - Prod/Staging Environment Standardization
+
+1. Neon ortam standardi netlestirildi:
+   - `production` branch -> `flight_app`
+   - `staging` branch -> `flight_app_staging`
+2. Render servisleri ayrik dogrulandi:
+   - `backend` -> prod DB (`flight_app`)
+   - `backend-staging` -> staging DB (`flight_app_staging`)
+3. Izolasyon testi dogrulandi:
+   - staging verisi prod'da gorunmuyor
+   - prod verisi staging'de otomatik gorunmuyor
+4. Artik kullanilmayan `neondb` temizlendi.

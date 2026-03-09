@@ -129,6 +129,23 @@ curl -i https://<backend-domain>/swagger/
 
 ---
 
+## 7) Prod / Staging DB Mapping
+
+Ortamlarin birbiriyle karismamasi icin Render env tarafinda su standardi koru:
+
+- `backend` (prod):
+  - `SQL_HOST=<neon-production-host>`
+  - `SQL_DATABASE=flight_app`
+- `backend-staging`:
+  - `SQL_HOST=<neon-staging-host>`
+  - `SQL_DATABASE=flight_app_staging`
+
+Not:
+- Branch secimini `ENV_NAME` degil, `SQL_*` degerleri belirler.
+- `ENV_NAME` sadece Django settings secimi icindir (`dev` / `prod`).
+
+---
+
 ## Notlar
 
 - Bu projede frontend backend'e token auth ile baglanir.

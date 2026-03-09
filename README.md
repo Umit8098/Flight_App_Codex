@@ -66,6 +66,19 @@ If local PostgreSQL already uses `5432`, compose uses `5433:5432`.
 - Frontend: Render Web Service (Docker, root `frontend/`)
 - DB: Neon PostgreSQL (`flight_app`)
 
+## Environment Mapping (Current)
+
+- `backend` (prod):
+  - Backend URL: `https://umitdev-flight-backend.onrender.com`
+  - Frontend URL: `https://umitdev-flight-frontend.onrender.com`
+  - Neon branch: `production`
+  - Database: `flight_app`
+- `backend-staging`:
+  - Backend URL: `https://umitdev-flight-backend-staging.onrender.com`
+  - Frontend URL: `https://umitdev-flight-frontend-staging.onrender.com`
+  - Neon branch: `staging`
+  - Database: `flight_app_staging`
+
 Detailed steps:
 
 - `DEPLOY_CHECKLIST.md`
