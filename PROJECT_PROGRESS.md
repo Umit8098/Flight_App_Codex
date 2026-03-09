@@ -393,3 +393,8 @@ Bu dosya, backend + frontend fullstack gecis surecini adim adim takip etmek icin
 1. Proje kokune yeni `README.md` eklendi (monorepo, local run, docker run, deploy ozet).
 2. `.env.example` gercek secret icermeyecek sekilde production template formatinda guncellendi.
 3. `frontend/.env.example` ve `frontend/.env.production.example` dosyalari acik ve tutarli aciklamalarla guncellendi.
+4. `backend/Readme.md` recruiter-odakli ve kisa formatta bastan yazildi:
+   - net live linkler
+   - teknoloji ve mimari ozeti
+   - endpoint ozetleri
+   - local/docker run adimlari
