@@ -100,13 +100,15 @@ function App() {
         <Route path="/flights/:id" element={<FlightDetailPage user={user} />} />
         <Route
           path="/my-reservations"
-          element={user ? <MyReservationsPage isStaffView={false} /> : <Navigate to="/login" replace />}
+          element={
+            user ? <MyReservationsPage isStaffView={false} user={user} /> : <Navigate to="/login" replace />
+          }
         />
         <Route
           path="/staff/reservations"
           element={
             user?.is_staff ? (
-              <MyReservationsPage isStaffView={true} />
+              <MyReservationsPage isStaffView={true} user={user} />
             ) : (
               <Navigate to="/" replace />
             )

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
 
-function MyReservationsPage({ isStaffView = false }) {
+function MyReservationsPage({ isStaffView = false, user }) {
   const [rows, setRows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -10,7 +10,9 @@ function MyReservationsPage({ isStaffView = false }) {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await api.get("/flight/reservations/");
+        const response = await api.get(
+          isStaffView ? "/flight/reservations/" : "/flight/reservations/?mine=1"
+        );
         const data = Array.isArray(response.data)
           ? response.data
           : response.data?.results || [];
@@ -24,7 +26,7 @@ function MyReservationsPage({ isStaffView = false }) {
     };
 
     fetchReservations();
-  }, []);
+  }, [isStaffView]);
 
   return (
     <section className="page">

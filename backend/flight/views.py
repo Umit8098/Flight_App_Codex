@@ -43,7 +43,11 @@ class ReservationView(viewsets.ModelViewSet):
     
     def get_queryset(self):
         queryset = super().get_queryset()
-        
+        mine = self.request.query_params.get("mine")
+        mine_enabled = str(mine).lower() in {"1", "true", "yes", "y", "on"}
+
         if self.request.user.is_staff:
+            if mine_enabled:
+                return queryset.filter(user=self.request.user)
             return queryset
         return queryset.filter(user=self.request.user)
